@@ -1,0 +1,221 @@
+- platform: template
+  lights:
+    lights_room1_1:
+      friendly_name: "방1 조명 1"
+      value_template: "{{ states('sensor.lights_room1').split('\n')[0] }}"
+      turn_on:
+        service: rest_command.light_control_room
+        data:
+          room_num: '1'
+          unit_num: 'switch1'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_room
+        data:
+          room_num: '1'
+          unit_num: 'switch1'
+          control_action: 'off'        
+          
+    lights_room1_2:
+      friendly_name: "방1 조명 2"
+      value_template: "{{ states('sensor.lights_room1').split('\n')[1] }}"
+      turn_on:
+        service: rest_command.light_control_room
+        data:
+          room_num: '1'
+          unit_num: 'switch2'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_room
+        data:
+          room_num: '1'
+          unit_num: 'switch2'
+          control_action: 'off'
+    
+    lights_room1_3:
+      friendly_name: "방1 조명 3"
+      value_template: "{{ states('sensor.lights_room1').split('\n')[2] }}" 
+      turn_on:
+        service: rest_command.light_control_room
+        data:
+          room_num: '1'
+          unit_num: 'switch3'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_room
+        data:
+          room_num: '1'
+          unit_num: 'switch3'
+          control_action: 'off'          
+          
+    lights_livingroom1:
+      friendly_name: "거실 조명 1"
+      value_template: "{{ states('sensor.lights_livingroom').split('\n')[0] }}"
+      turn_on:
+        service: rest_command.light_control_living_room
+        data:
+          unit_num: 'switch1'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_living_room
+        data:
+          unit_num: 'switch1'
+          control_action: 'off'
+          
+    lights_livingroom2:
+      friendly_name: "거실 조명 2"
+      value_template: "{{ states('sensor.lights_livingroom').split('\n')[1] }}"
+      turn_on:
+        service: rest_command.light_control_living_room
+        data:
+          unit_num: 'switch2'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_living_room
+        data:
+          unit_num: 'switch2'
+          control_action: 'off'
+          
+    lights_livingroom3:
+      friendly_name: "거실 조명 3"
+      value_template: "{{ states('sensor.lights_livingroom').split('\n')[2] }}"
+      turn_on:
+        service: rest_command.light_control_living_room
+        data:
+          unit_num: 'switch3'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_living_room
+        data:
+          unit_num: 'switch3'
+          control_action: 'off'
+    
+    lights_room2_1:
+      friendly_name: "방2 조명 1"
+      value_template: "{{ states('sensor.lights_room2').split('\n')[0] }}" 
+      turn_on:
+        service: rest_command.light_control_room
+        data:
+          room_num: '2'
+          unit_num: 'switch1'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_room
+        data:
+          room_num: '2'
+          unit_num: 'switch1'
+          control_action: 'off'
+
+    lights_room2_2:
+      friendly_name: "방2 조명 2"
+      value_template: "{{ states('sensor.lights_room2').split('\n')[1] }}" 
+      turn_on:
+        service: rest_command.light_control_room
+        data:
+          room_num: '2'
+          unit_num: 'switch2'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_room
+        data:
+          room_num: '2'
+          unit_num: 'switch2'
+          control_action: 'off'
+          
+    lights_room3_1:
+      friendly_name: "방3 조명 1"
+      value_template: "{{ states('sensor.lights_room3').split('\n')[0] }}"
+      turn_on:
+        service: rest_command.light_control_room
+        data:
+          room_num: '3'
+          unit_num: 'switch1'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_room
+        data:
+          room_num: '3'
+          unit_num: 'switch1'
+          control_action: 'off'
+          
+    lights_room3_2:
+      friendly_name: "방3 조명 2"
+      value_template: "{{ states('sensor.lights_room3').split('\n')[1] }}"  
+      turn_on:
+        service: rest_command.light_control_room
+        data:
+          room_num: '3'
+          unit_num: 'switch2'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_room
+        data:
+          room_num: '3'
+          unit_num: 'switch2'
+          control_action: 'off'
+          
+    lights_room4_1:
+      friendly_name: "방4 조명 1"
+      value_template: "{{ states('sensor.lights_room4').split('\n')[0] }}"      
+      turn_on:
+        service: rest_command.light_control_room
+        data:
+          room_num: '4'
+          unit_num: 'switch1'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_room
+        data:
+          room_num: '4'
+          unit_num: 'switch1'
+          control_action: 'off'
+          
+    lights_room4_2:
+      friendly_name: "방4 조명 2"
+      value_template: "{{ states('sensor.lights_room4').split('\n')[1] }}"
+      turn_on:
+        service: rest_command.light_control_room
+        data:
+          room_num: '4'
+          unit_num: 'switch2'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_room
+        data:
+          room_num: '4'
+          unit_num: 'switch2'
+          control_action: 'off'
+
+    lights_room5_1:
+      friendly_name: "방5 조명 1"
+      value_template: "{{ states('sensor.lights_room5').split('\n')[0] }}"      
+      turn_on:
+        service: rest_command.light_control_room
+        data:
+          room_num: '5'
+          unit_num: 'switch1'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_room
+        data:
+          room_num: '5'
+          unit_num: 'switch1'
+          control_action: 'off'
+          
+    lights_room5_2:
+      friendly_name: "방5 조명 2"
+      value_template: "{{ states('sensor.lights_room5').split('\n')[1] }}"
+      turn_on:
+        service: rest_command.light_control_room
+        data:
+          room_num: '5'
+          unit_num: 'switch2'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.light_control_room
+        data:
+          room_num: '5'
+          unit_num: 'switch2'
+          control_action: 'off'
+          
+          

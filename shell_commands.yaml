@@ -1,0 +1,1 @@
+cookie_phpsessid: "curl -i -H 'User-Agent: Mozilla/5.0' 'http://{{states('sensor.host_ip')}}/webapp/data/getLoginWebApp.php?devce=WA&login_ide={{states('sensor.id')}}&login_pwd={{states('sensor.smarthome_pw')}}' 2>&1 | grep -oP '[0-9a-z]{32}' > /config/cookie_phpsessid"

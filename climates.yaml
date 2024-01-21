@@ -1,0 +1,39 @@
+  - platform: generic_thermostat
+    name: thermostat_livingroom
+    heater: switch.thermostat_livingroom
+    target_sensor: sensor.thermostat_livingroom_temperature
+    min_temp: 5
+    max_temp: 40
+    precision: 0.1
+
+  - platform: generic_thermostat
+    name: thermostat_room2
+    heater: switch.thermostat_room2
+    target_sensor: sensor.thermostat_room2_temperature
+    min_temp: 5
+    max_temp: 40
+    precision: 0.1
+
+  - platform: generic_thermostat
+    name: thermostat_room3
+    heater: switch.thermostat_room3
+    target_sensor: sensor.thermostat_room3_temperature
+    min_temp: 5
+    max_temp: 40
+    precision: 0.1
+
+  - platform: generic_thermostat
+    name: thermostat_room4
+    heater: switch.thermostat_room4
+    target_sensor: sensor.thermostat_room4_temperature
+    min_temp: 5
+    max_temp: 40
+    precision: 0.1
+
+  - platform: generic_thermostat
+    name: thermostat_room5
+    heater: switch.thermostat_room5
+    target_sensor: sensor.thermostat_room5_temperature
+    min_temp: 5
+    max_temp: 40
+    precision: 0.1
